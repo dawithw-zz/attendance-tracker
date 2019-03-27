@@ -11,7 +11,13 @@
 <body>
     <h1>Welcome</h1>
     <p ></p>
-    <p th:if="${people == null || people.size() < 1}">No person found</p>
-    <p th:if="${people != null}" th:each="person : ${people}" th:text="${person}"></p>
+    <p th:if="${faculties == null || faculties.isEmpty()}">No faculty found</p>
+    <p th:each="faculty : ${faculties}" th:text="${faculty}"></p>
+    <p th:if="${students == null || students.isEmpty()}">No student found</p>
+    <p th:each="student : ${students}" th:text="${student}"></p>
+    <p th:if="${courses == null || courses.isEmpty()}">No courses available</p>
+    <hr/>
+    <p th:if="${result != null}" th:text=${result}></p>
+    <!-- <p th:each="course : ${courses}" th:text="${course}"></p> -->
 </body>
 </html>

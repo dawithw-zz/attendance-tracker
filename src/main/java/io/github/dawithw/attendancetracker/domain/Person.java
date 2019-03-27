@@ -1,9 +1,9 @@
 package io.github.dawithw.attendancetracker.domain;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
-@Entity
+@MappedSuperclass
 public class Person {
     
     @Id
@@ -45,8 +45,7 @@ public class Person {
     }
 
     public String toString() {
-        return "Person:" + 
-                "\t" + firstName +
+        return  "\t" + firstName +
                 "\t" + lastName +
                 "\t" + email;
     }
